@@ -17,7 +17,6 @@ Création d’un DarkMode, qui varie en mode jour ou nuit l’ensemble du style 
 
 # Exercice 5 /3pts
 Crée un burger menu, qui au click de son icon s’ouvre et se referme.
-Notations
 
 Algorithme /1pts 
 Propreté du code /2pts

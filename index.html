@@ -1,14 +1,88 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Fondamentaux Javascript</title>
-    
-  </head>
+<html lang="fr">
 
-  <body>
-    <div>
-      
+<head>
+  <title>Les fondamentaux Js</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="light-mode">
+  <h1>Les fondamentaux Js</h1>
+
+  <!-- Exercice 1 -->
+  <div class="container">
+    <h2>Générateur de mot de passe</h2>
+    <div class="form-group">
+      <label for="passwordLength">Longueur du Mtp:</label>
+      <input type="range" class="form-control-range" id="passwordLength" min="4" max="20" step="1" />
     </div>
+    <div class="form-group">
+      <label for="passwordOutput">Mtp généré:</label>
+      <input type="text" class="form-control" id="passwordOutput" readonly />
+    </div>
+    <button class="btn btn-primary" id="generateButtonMtp" onclick="generatePassword()">
+      Générer
+    </button>
+  </div>
+
+  <!-- Exercice 2 -->
+  <div class="container">
+    <h2>Convertisseur</h2>
+    <div>
+      <label class="labelCel" for="celsius">Degrés Celsius:</label>
+      <input class="inputCel" type="number" id="celsius">
+      <button class="btn btn-primary" id="buttonConvertCel" onclick="convertToCelsius()">Convertir en Celsius</button>
+    </div>
+    <br></br>
+    <div>
+      <label class="labelFahr" for="fahrenheit">Degrés Fahrenheit:</label>
+      <input class="labelFahr" type="number" id="fahrenheit">
+      <button class="btn btn-primary" id="buttonConvertFahr" onclick="convertToFahrenheit()">Convertir en
+        Fahrenheit</button>
+    </div>
+  </div>
+
+  <!-- Exercice 3 -->
+  <div class="container" id="modal">
+    <h2>Générateur de citations</h2>
+    <div class="modal">
+      <div class="overlay">
+        <div class="popup">
+          <p class="text"><!-- ma citation sera ici --></p>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="generateButtonCitation" onclick="getNotify()">
+      Générer
+    </button>
+  </div>
+
+  <!-- Exercice 4 -->
+  <div class="container">
+    <h2>Dark mode</h2>
+    <button class="btn btn-primary" id="generateButtonCitation" onclick="toggleDarkMode()">DarkMode</button>
+  </div>
+
+  <!-- Exercie 5 -->
+  <div class="container">
+    <h2>Menu Burger</h2>
+    <div class="navbar">
+      <div class="burger-menu" id="burger-menu" onclick="showBurger()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="menu" id="menu">
+        <li>Générateur Mtp</li>
+        <li>Convertisseur</li>
+        <li>Générateur Citations</li>
+        <li>Dark mode</li>
+        <li>Menu Burger</li>
+      </ul>
+    </div>
+
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
